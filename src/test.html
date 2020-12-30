@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue多元素过渡</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <style>
+      p {
+        transform-origin: 0 50%;
+        position: relative;
+      }
+      .mytr-enter,
+      .mytr-leave-to {
+        opacity: 0;
+      }
+      .mytr-enter-active {
+        opacity: 1;
+        animation: first 1s linear;
+      }
+      .mytr-leave-active {
+        opacity: 1;
+        animation: second 1s linear;
+      }
+      @keyframes first {
+        0% {
+          transform: scale(0);
+        }
+        50% {
+          transform: scale(1.2, 1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes second {
+        0% {
+          transform: scale(1);
+        }
+        40% {
+          transform: rotate(45deg);
+        }
+        55% {
+          transform: rotate(90deg);
+        }
+        85% {
+          transform: rotate(45deg);
+        }
+        100% {
+          transform: rotate(90deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="show=!show">点击</button>
+      <transition name="mytr" mode="in-out">
+        <p v-if="show" key="sa">SaSaSaSaSaSaSaSa</p>
+        <p v-else key="ta">TaTaTaTaTaTaTaTaTaTa</p>
+        <!-- <p v-if="show">SaSaSaSaSaSaSaSa</p> -->
+        <!-- <p v-else>TaTaTaTaTaTaTaTaTaTa</p> -->
+      </transition>
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          show: true
+        }
+      });
+    </script>
+  </body>
+</html>
