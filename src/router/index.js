@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-21 09:57:41
- * @LastEditTime: 2020-12-30 14:35:45
+ * @LastEditTime: 2020-12-30 15:57:06
  * @LastEditors: quling
  * @Description: In User Settings Edit
  * @FilePath: \Vue\src\router\index.js
@@ -16,6 +16,7 @@ import computeAndWatch from "@/views/computeAndWatch/computeAndWatch";
 import ifAndKey from "@/views/ifAndKey/ifAndKey";
 import key from "@/views/ifAndKey/key";
 import dataUpdate from "@/views/ifAndKey/dataUpdate";
+import eventsHandle from "@/views/eventsHandle/eventsHandle";
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
       path: "/dataUpdate",
       name: "dataUpdate",
       component: dataUpdate
+    },
+    {
+      path: "/eventsHandle",
+      name: "eventsHandle",
+      component: eventsHandle
     }
   ]
 });

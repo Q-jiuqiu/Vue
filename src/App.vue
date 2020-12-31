@@ -8,6 +8,7 @@
     <router-link to="/ifAndKey">条件渲染和key</router-link>
     <router-link to="/key">key</router-link>
     <router-link to="/dataUpdate">数组更新检测</router-link>
+    <router-link to="/eventsHandle">事件处理</router-link>
     <router-view />
   </div>
 </template>
