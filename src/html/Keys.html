@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://blog.csdn.net/weixin_41655541/article/details/81115248">
+      keys
+    </a>
+    <script>
+      function Fun() {
+        return {
+          1: "12",
+          w: 123
+        };
+      }
+      function test() {
+        return fun();
+      }
+      function Fun1() {
+        this.obj = {
+          1: "12",
+          w: 123
+        };
+      }
+      let fun1 = new Fun1();
+      console.log(fun1);
+    </script>
+  </body>
+</html>

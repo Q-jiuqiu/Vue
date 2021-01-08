@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet"  type="text/css" href="index.css"/>
+        <!-- <script src="vue.js"></script> -->
+    </head>
+    <body>
+        <div>
+        <h1>--解构插槽 Prop--</h1>
+        <div id="example6">
+            <current-user v-slot="{ user }">
+                {{ user.firstName }}
+            </current-user>
+            <!--将user重命名为person-->
+            </br>
+            <current-user v-slot="{ user : person }">
+                {{ person.firstName }}
+            </current-user>
+        </div>
+        <script>
+        Vue.component('current-user', {
+            data: function () {
+                return {
+                    user: {
+                        firstName: 'Arya',
+                        lastName: 'Stark'
+                    }
+                }
+            },
+            template: '\
+                <span>\
+                    <slot v-bind:user="user">{{ user.lastName }}</slot>\
+                </span>\
+            '
+        })
+        var example6 = new Vue({
+            el:'#example6'
+        })
+        </script>
+        </div>        
+    </body>
+</html>

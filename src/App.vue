@@ -9,11 +9,18 @@
     <router-link to="/key">key</router-link>
     <router-link to="/dataUpdate">数组更新检测</router-link>
     <router-link to="/eventsHandle">事件处理</router-link>
+    <router-link to="/componentFoindation">组件基础</router-link>
+    <router-link to="/customEvents">自定义事件</router-link>
+    <allButton></allButton>
     <router-view />
   </div>
 </template>
 
 <script>
+// import hello from "./components/HelloWorld";
+
+import "./utils/allRegisterComp";
+
 export default {
   name: "App"
 };
