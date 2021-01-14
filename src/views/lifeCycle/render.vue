@@ -2,7 +2,7 @@
 export default {
   name: "App",
   data() {
-    return { time: 0, year: 0 };
+    return { time: 0, year: 0, bar: false };
   },
   methods: {
     change() {
@@ -10,7 +10,10 @@ export default {
     },
     changeYear() {
       this.year++;
-      console.log(this.year);
+      // console.log(this.year);
+    },
+    changeBg() {
+      this.bar = !this.bar;
     }
   },
   render: function(createElement) {
@@ -18,9 +21,15 @@ export default {
     return createElement(
       "div",
       {
-        class: "test",
+        class: {
+          test: true,
+          bar: false
+        },
         style: {
           color: "red"
+        },
+        domProps: {
+          innerHTML: "baz"
         }
       },
       [
@@ -42,6 +51,15 @@ export default {
             }
           },
           "按钮二---改变year"
+        ),
+        createElement(
+          "button",
+          {
+            on: {
+              click: this.changeBg
+            }
+          },
+          "按钮三---改变背景颜色"
         )
       ]
     );
@@ -60,7 +78,7 @@ export default {
   },
   beforeUpdate() {
     console.log("==beforeUpdate==");
-    console.log(document.querySelector(".test").innerHTML);
+    // console.log(document.querySelector(".test").innerHTML);
     console.log(this.time);
   },
   updated() {
@@ -69,3 +87,14 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.test {
+  width: 300px;
+  height: 300px;
+  border: pink 2px solid;
+}
+.bar {
+  background-color: plum;
+}
+</style>

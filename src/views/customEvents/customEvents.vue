@@ -4,7 +4,7 @@
     <son @on-click="getSonCount" v-model="lovingVue"></son>
     {{ lovingVue }}
 
-    <!-- <div class="v-model">
+    <div class="v-model">
       <h1>v-model</h1>
       <inputPrice v-model="price"></inputPrice>
       <inputPrice @input="onInput" :value="price"></inputPrice>
@@ -14,7 +14,7 @@
       ></inputPrice>
       <inputPrice @focus="onFocus" placeholder="无.native"></inputPrice>
       <p>{{ price }}</p>
-    </div> -->
+    </div>
 
     <!-- <div class="syncAttr">
       <h1>.sync</h1>

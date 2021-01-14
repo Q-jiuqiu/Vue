@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-12-21 09:57:41
- * @LastEditTime: 2021-01-06 11:05:11
+ * @LastEditTime: 2021-01-11 16:34:29
  * @LastEditors: quling
  * @Description: In User Settings Edit
  * @FilePath: \Vue\src\router\index.js
@@ -19,6 +19,7 @@ import dataUpdate from "@/views/ifAndKey/dataUpdate";
 import eventsHandle from "@/views/eventsHandle/eventsHandle";
 import componentFoindation from "@/views/componentFoindation/componentFoindation";
 import customEvents from "@/views/customEvents/customEvents";
+// import combination from "@/views/combination/combination";
 
 Vue.use(Router);
 
@@ -78,6 +79,18 @@ export default new Router({
       path: "/customEvents",
       name: "customEvents",
       component: customEvents
+    },
+    {
+      path: "/combination",
+      name: "combination",
+      component: () => import("@/views/combination/combination"),
+      children: [
+        {
+          path: "render",
+          name: "render",
+          component: () => import("@/views/combination/render/render.vue")
+        }
+      ]
     }
   ]
 });

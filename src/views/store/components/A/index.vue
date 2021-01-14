@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-24 10:16:40
- * @LastEditTime: 2020-12-24 14:40:12
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-01-14 11:30:19
+ * @LastEditors: quling
  * @Description: In User Settings Edit
  * @FilePath: \Vue\src\views\store\components\A\index.vue
 -->
@@ -35,7 +35,7 @@ export default {
     changeActions() {
       alert("actions");
       this.$store.dispatch("SET_DEPARTMENT", "嘻嘻嘻");
-      console.log(this.$store.getters.department);
+      console.log(this.$store.department);
     }
   }
 };
