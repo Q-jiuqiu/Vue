@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -15,6 +16,9 @@
   },
   "devDependencies": {
     "@vue/test-utils": "^1.2.2",
+    "@vue/cli-plugin-babel": "^3.0.3",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.0.3",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
