@@ -1,19 +1,21 @@
 {
   "name": "mytest",
   "version": "1.0.0",
+  "private": true,
   "description": "A Vue.js project",
   "author": "quling <2308945909@qq.com>",
-  "private": true,
   "scripts": {
+    "build": "node build/build.js",
+    "test:unit": "vue-cli-service test:unit",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "build": "node build/build.js"
+    "start": "npm run dev"
   },
   "dependencies": {
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/cli-plugin-unit-jest": "~4.5.0",
     "@vue/test-utils": "^1.2.2",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
@@ -55,13 +57,13 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
-  "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
-  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
 }
