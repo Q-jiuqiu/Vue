@@ -1,3 +1,9 @@
 module.exports = {
-  extends: ['./node_modules/vue-cli-plugin-commitlint/lib/lint']
+  extends: ["cz"],
+  rules: {
+    'type-empty': [2, 'never'],
+    'scope-enum': [
+      0
+    ]
+  }
 };
