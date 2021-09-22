@@ -13,9 +13,10 @@
   "dependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
-    "core-js": "^3.6.5",
+    "core-js": "^3.18.0",
     "right-pad": "^1.0.1",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -56,19 +57,12 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn test:unit",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/vue-cli-plugin-commitlint/lib/cz"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }
 }
