@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router';
+import registerComponents from "@/components";
 
-createApp(App).mount('#app')
+
+const app = createApp(App)
+
+registerComponents(app)
+
+app.use(router).mount('#app');
