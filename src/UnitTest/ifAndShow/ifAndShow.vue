@@ -1,0 +1,46 @@
+<template>
+  <div>
+    <h1>v-if/v-show 单元测试</h1>
+    <button
+      class="ifBtn"
+      @click="ifFun"
+    >!(v-if)</button>
+    <button
+      class="showfBtn"
+      @click="showFun"
+    >!(v-show)</button>
+    <div
+      class="ifDiv"
+      v-if="iF"
+    >if</div>
+    <div
+      class="showDiv"
+      v-show="show"
+    >show</div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "ifAndShow",
+
+  data() {
+    return {
+      iF: true,
+      show: true
+    };
+  },
+
+  methods: {
+    ifFun() {
+      this.iF = !this.iF;
+    },
+    showFun() {
+      this.show = !this.show;
+    }
+  }
+};
+</script>
+
+<style>
+</style>

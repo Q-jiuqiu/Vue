@@ -1,11 +1,22 @@
 <template>
   <div class="header">
-    <h1>标题</h1>
+    <div
+      class="nav"
+      v-for="(item,index) in navList"
+      :key="index"
+    >{{item.name}}</div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    navList: {
+      type: Array,
+      default: () => []
+    }
+  }
+};
 </script>
 
 <style>

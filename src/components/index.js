@@ -1,6 +1,5 @@
 
 export default function registerComponents(app) {
-  console.log(app);
   const req = require.context(".", true, /\.vue$/);
 
   req.keys().forEach(fileName => {
