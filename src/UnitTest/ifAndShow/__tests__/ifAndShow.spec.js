@@ -21,4 +21,19 @@ describe("ifAndShow.spec", () => {
     // exists 组件或者组件的祖先元素设置了display: none 或 visibility: hidden 样式则返回 true
     expect(ifDiv.exists()).toBe(false);
   })
+
+  it("修改data的初始化", () => {
+    const wrapper = mount(ifAndShow, {
+      data() { // 与组件中的data取并集
+        return {
+          iF: true,
+          show: true
+        }
+      }
+    })
+    const ifDiv = wrapper.find(".ifDiv")
+    const showDiv = wrapper.find(".showDiv")
+    expect(ifDiv.exists()).toBe(true)
+    expect(showDiv.isVisible()).toBe(true)
+  })
 })
