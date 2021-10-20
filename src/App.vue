@@ -8,6 +8,7 @@
   <div>
     <ifAndShow />
     <props :minLength="2" />
+    <myslot>你好</myslot>
   </div>
 </template>
 
@@ -15,11 +16,13 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import ifAndShow from "@/UnitTest/ifAndShow/ifAndShow.vue";
 import props from "@/UnitTest/props/props.vue";
+import myslot from "@/UnitTest/slot/slot.vue";
 export default {
   name: "App",
   components: {
     ifAndShow,
-    props
+    props,
+    myslot
     // HelloWorld
   }
 };
