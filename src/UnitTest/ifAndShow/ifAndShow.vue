@@ -9,6 +9,10 @@
       class="showfBtn"
       @click="showFun"
     >!(v-show)</button>
+    <button
+      class="emitBtn"
+      @click="emitFun"
+    >触发emit事件</button>
     <div
       class="ifDiv"
       id="ifDiv"
@@ -28,7 +32,8 @@ export default {
   data() {
     return {
       iF: false,
-      show: false
+      show: false,
+      count: 0
     };
   },
 
@@ -38,6 +43,10 @@ export default {
     },
     showFun() {
       this.show = !this.show;
+    },
+    emitFun() {
+      // console.log("click");
+      this.$emit("emitFun", this.count++);
     }
   }
 };
