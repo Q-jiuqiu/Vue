@@ -11,6 +11,7 @@
     >!(v-show)</button>
     <div
       class="ifDiv"
+      id="ifDiv"
       v-if="iF"
     >if</div>
     <div
@@ -26,8 +27,8 @@ export default {
 
   data() {
     return {
-      iF: true,
-      show: true
+      iF: false,
+      show: false
     };
   },
 
