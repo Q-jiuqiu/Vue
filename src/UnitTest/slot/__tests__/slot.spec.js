@@ -67,7 +67,8 @@ describe("slot.vue", () => {
         default: h("div", "Foo") // 接收虚拟dom
       }
     })
-    console.log(wrapper.html());
+    // console.log(wrapper.html());
+    // console.log(window.navigator); // 返回为{},不能获取浏览器的配置
     expect(wrapper.text()).toContain("Foo")
   })
 })
