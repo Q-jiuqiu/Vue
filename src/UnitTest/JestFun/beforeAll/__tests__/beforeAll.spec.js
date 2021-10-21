@@ -5,10 +5,10 @@ describe("beforeAll", () => {
     console.log(count);
   });
   test("测试一", () => {
-    console.log(count);
+    // console.log(count);
   })
   test("测试二", () => {
-    console.log(count);
+    // console.log(count);
   })
 })
 // 最终的输出结果为依次为: 2(beforeAll打印的) 2(测试一打印的) 2(测试二打印的)
